@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+  <title>Canvas</title>
+  <style>
+
+    /*
+     * https://sevenhao.github.io/qhao/web/css-aritcle/css-property/CSS%E5%AE%9E%E7%8E%B0%E5%9C%86%E5%BD%A2%E8%BF%9B%E5%BA%A6%E6%9D%A1.html
+     */
+      .circle_process {
+          width: 199px;
+          height: 200px;
+          background-color:  #fff;
+          position: relative;
+          transform: rotate(30deg);
+      }
+
+      .circle_process .wrapper{
+          width: 100px;
+          height: 200px;
+          position: absolute;
+          top:0;
+          overflow: hidden;
+      }
+
+      .circle_process .right{
+          right:0;
+      }
+
+      .circle_process .left{
+          left:0;
+      }
+
+      .circle_process .circle{
+          width: 160px;
+          height: 160px;
+          border:20px solid transparent;
+          border-radius: 50%;
+          position: absolute;
+          top:0;
+          transform : rotate(-135deg);
+      }
+
+      .circle_process .rightcircle{
+          border-top: 20px solid green;
+          border-right:20px solid green;
+          right:0;
+          -webkit-animation: circle_right 1s linear 1 forwards;
+      }
+
+      .circle_process .leftcircle{
+          border-bottom:20px solid green;
+          border-left:20px solid green;
+          left:0;
+          -webkit-animation: circle_left 1s linear 1 forwards;
+      }
+
+
+      @-webkit-keyframes circle_right{
+          0%{
+              -webkit-transform: rotate(-135deg);
+          }
+          50%, 100%{
+              -webkit-transform: rotate(-15deg);  /* -10 */
+          }
+      }
+
+      @-webkit-keyframes circle_left{
+        0%, 50%{
+            -webkit-transform: rotate(-135deg);
+        }
+        100%{
+            -webkit-transform: rotate(45deg);  /* 45 */
+        }
+      }
+  </style>
+</head>
+<body>
+    <div class="circle_process">
+        <div class="wrapper right">
+          <div class="circle rightcircle"></div>
+        </div>
+
+        <div class="wrapper left">
+          <div class="circle leftcircle" id="leftcircle"></div>
+        </div>
+    </div>
+
+
+  <script>
+      let totalDeg = 360-50;
+      let 0.5 * 310 = 155;
+      let 155 - 135 = 20
+      310 - 135 = 
+    
+  </script>
+  </body>
+</html>
